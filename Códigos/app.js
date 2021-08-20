@@ -49,10 +49,9 @@ function addTerefa() {
 }
 
 buttonElement.setAttribute('onclick', 'addTerefa()')
-listElement.addEventListener("click",deleteAndeCheck);
+listElement.addEventListener("click",AndeCheck);
 
 function removeTarefa(pos){
-    tarefas[pos].addEventListener()
     tarefas.splice(pos, 1)
     mostraTarefas()
     salvarNoLocalStorage()
@@ -62,7 +61,7 @@ function salvarNoLocalStorage() {
     localStorage.setItem('list_tarefas', JSON.stringify(tarefas))
 } 
 
-function deleteAndeCheck(e){
+function AndeCheck(e){
 
     const item = e.target;
     const Total = item.parentElement

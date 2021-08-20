@@ -12,3 +12,8 @@
 .fa-trash, .fa-check{
     pointer-events: none;
 }
+
+.fall{
+    transform: translate(8rem) rotate(20deg);
+    opacity: 0;
+}
