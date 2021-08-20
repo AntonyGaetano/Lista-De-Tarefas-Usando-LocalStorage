@@ -3,3 +3,12 @@
     background-color: brown;
     color:white;
 }
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5 ;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}

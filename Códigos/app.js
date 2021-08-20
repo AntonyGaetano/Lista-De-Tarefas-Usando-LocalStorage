@@ -15,17 +15,22 @@ function mostraTarefas() {
 
         itemList.setAttribute('class', 'mdl-list__item')
 
-        const linkElement = document.createElement('a')
-        linkElement.setAttribute('class', 'material-icons')
+        const linkElement = document.createElement('button')
+        linkElement.classList.add("delete-btn");
 
-        const linkText = document.createTextNode('delete')
-        linkElement.appendChild(linkText)
+        linkElement.innerHTML='<i class="fas fa-trash"></i>'
+
+        const tarefaCompleta=document.createElement('button');
+        tarefaCompleta.classList.add("completed-btn");
+        tarefaCompleta.innerHTML='<i class="fas fa-check"></i>'
 
         const pos = tarefas.indexOf(item)
         linkElement.setAttribute('onclick', `removeTarefa(${pos})`)
 
         itemList.appendChild(itemText)
+        itemList.appendChild(tarefaCompleta)
         itemList.appendChild(linkElement)
+        
 
         listElement.appendChild(itemList)
     }
@@ -44,8 +49,10 @@ function addTerefa() {
 }
 
 buttonElement.setAttribute('onclick', 'addTerefa()')
+listElement.addEventListener("click",deleteAndeCheck);
 
-function removeTarefa(pos) {
+function removeTarefa(pos){
+    tarefas[pos].addEventListener()
     tarefas.splice(pos, 1)
     mostraTarefas()
     salvarNoLocalStorage()
@@ -54,3 +61,20 @@ function removeTarefa(pos) {
 function salvarNoLocalStorage() {
     localStorage.setItem('list_tarefas', JSON.stringify(tarefas))
 } 
+
+function deleteAndeCheck(e){
+
+    const item = e.target;
+    const Total = item.parentElement
+
+    console.log(Total)
+ 
+    if(item.classList[0] === "completed-btn"){
+     Total.classList.toggle('completed')
+    
+    }
+ }
+ 
+ //Eventos
+ 
+ 
