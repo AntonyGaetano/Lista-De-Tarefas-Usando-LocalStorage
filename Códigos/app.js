@@ -1,14 +1,15 @@
+const listElement = document.querySelector('ul')
+const inputElement = document.querySelector('input')
+const buttonElement = document.querySelector('button')
 
-const listElement = document.querySelector('.ul')
-const inputElement = document.querySelector('.input')
-const buttonELement = document.querySelector('.button')
+const tarefas = JSON.parse(localStorage.getItem('list_tarefas')) || []
 
-const tarefas = []
+function mostraTarefas() {
 
-function mostraTarefa(){
-    listElement.innerHTML = ""
+    listElement.innerHTML = ''
 
-    for(item of tarefas){
+    for (item of tarefas) {
+
         const itemList = document.createElement('li')
         const itemText = document.createTextNode(item)
 
@@ -21,7 +22,7 @@ function mostraTarefa(){
         linkElement.appendChild(linkText)
 
         const pos = tarefas.indexOf(item)
-        linkElement.addEventListener('click',removeTarefa(pos))
+        linkElement.setAttribute('onclick', `removeTarefa(${pos})`)
 
         itemList.appendChild(itemText)
         itemList.appendChild(linkElement)
@@ -30,20 +31,26 @@ function mostraTarefa(){
     }
 }
 
-mostraTarefa()
+mostraTarefas()
 
-function addTarefa(){
+function addTerefa() {
     const tarefa = inputElement.value
 
     tarefas.push(tarefa)
 
-    inputElement.value = ""
-    mostraTarefa()
+    inputElement.value = ''
+    mostraTarefas()
+    salvarNoLocalStorage()
 }
 
-buttonELement.addEventListener('click', addTarefa)
+buttonElement.setAttribute('onclick', 'addTerefa()')
 
-function removeTarefa(pos){
-    tarefas.splice(pos,1)
-    mostraTarefa()
+function removeTarefa(pos) {
+    tarefas.splice(pos, 1)
+    mostraTarefas()
+    salvarNoLocalStorage()
 }
+
+function salvarNoLocalStorage() {
+    localStorage.setItem('list_tarefas', JSON.stringify(tarefas))
+} 
