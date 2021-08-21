@@ -4,9 +4,12 @@ const buttonElement = document.querySelector('button')
 
 const tarefas = JSON.parse(localStorage.getItem('list_tarefas')) || []
 
+inputElement.focus();
+
 function mostraTarefas() {
 
     listElement.innerHTML = ''
+   
 
     for (item of tarefas) {
 
@@ -27,6 +30,9 @@ function mostraTarefas() {
         const Div = document.createElement('div')
         Div.classList.add("the-div");
 
+        const Div2 = document.createElement('div')
+        Div2.classList.add("the-div2");
+
         const pos = tarefas.indexOf(item)
         linkElement.setAttribute('onclick', `removeTarefa(${pos})`)
 
@@ -34,9 +40,10 @@ function mostraTarefas() {
         Div.appendChild(tarefaCompleta)
         Div.appendChild(linkElement)
         itemList.appendChild(Div)
+        Div2.appendChild(itemList)
         
 
-        listElement.appendChild(itemList)
+        listElement.appendChild(Div2)
     }
 }
 
