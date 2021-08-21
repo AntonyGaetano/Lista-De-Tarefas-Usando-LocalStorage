@@ -24,12 +24,16 @@ function mostraTarefas() {
         tarefaCompleta.classList.add("completed-btn");
         tarefaCompleta.innerHTML='<i class="fas fa-check"></i>'
 
+        const Div = document.createElement('div')
+        Div.classList.add("the-div");
+
         const pos = tarefas.indexOf(item)
         linkElement.setAttribute('onclick', `removeTarefa(${pos})`)
 
         itemList.appendChild(itemText)
-        itemList.appendChild(tarefaCompleta)
-        itemList.appendChild(linkElement)
+        Div.appendChild(tarefaCompleta)
+        Div.appendChild(linkElement)
+        itemList.appendChild(Div)
         
 
         listElement.appendChild(itemList)
@@ -64,7 +68,7 @@ function salvarNoLocalStorage() {
 function AndeCheck(e){
 
     const item = e.target;
-    const Total = item.parentElement
+    const Total = (item.parentElement).parentElement
 
     console.log(Total)
  
