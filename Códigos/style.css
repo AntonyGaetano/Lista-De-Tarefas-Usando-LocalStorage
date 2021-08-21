@@ -1,12 +1,20 @@
 *{padding: 0px; margin: 0px; box-sizing: border-box;}
 
+body{
+    background-color: #FCCF3A;
+    min-height: 100vh;
+}
 
 .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    width: max-content;
+    margin: 5rem auto;
+    border: 1px solid;
+    box-shadow: -4px 4px 2px;
+    padding: 3rem 4rem;
 }
 
 .content>h2{
@@ -17,32 +25,31 @@
 
 .input-button{
    display: flex;
-   gap:1rem;
-   border: 1px solid;
-   padding: 2.5rem;
+   gap:2.4rem;
+   padding: 2.2rem;
    margin-bottom: 1rem;
-}
-
-#tarefa{
-    padding: 0.8rem;
-    border: 1px double;
-    font-size: 20px;  
-}
-
-.fa-plus-circle{
-    transform: scale(1.8); 
-}
-
-.button{
-    width: 50px;
-    background-color:lightseagreen;
-    color:white;
+   border-radius: 20px;
+   align-items: center;
 }
 
 .button:hover{
-    cursor: pointer;
-   background-color: rgb(18, 134, 129);
+color:white;
+
 }
+
+#tarefa{
+    padding: 0.9rem;
+    border: 1px double;
+    font-size: 20px;  
+    border-radius: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fa-plus{
+    transform: scale(2.5); 
+}
+
+
 
 .completed{
     text-decoration: line-through;
@@ -66,14 +73,15 @@
     align-items: center;
     min-width: 40%;
     list-style: none;
-     
+    border-radius: 10px;
+    font-family: cursive;
 }
 
 .the-div > button{
     width: 40px;
-    height: 30px;
-    transform: scale(1.1);
-    margin: 0 0.4rem;
+    height: 35px;
+    transform: scale(1.2);
+    margin: 0 0.6rem;
 }
 
 .completed-btn{
@@ -86,11 +94,13 @@
     color:white;
 }
 
-
-
 .list>ul{
 display: grid;
 justify-content: center;
 gap:0.5rem;
+}
+
+.the-list2{
+border-radius: 20px;
 }
 

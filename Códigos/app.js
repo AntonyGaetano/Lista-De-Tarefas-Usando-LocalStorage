@@ -1,15 +1,17 @@
 const listElement = document.querySelector('ul')
 const inputElement = document.querySelector('input')
-const buttonElement = document.querySelector('button')
+const buttonElement = document.querySelector('.button')
 
 const tarefas = JSON.parse(localStorage.getItem('list_tarefas')) || []
 
-inputElement.focus();
+document.addEventListener("load",inputElement.focus())
 
-function mostraTarefas() {
 
-    listElement.innerHTML = ''
-   
+
+function mostraTarefas(){
+
+    listElement.innerHTML = '';
+    inputElement.focus();
 
     for (item of tarefas) {
 
