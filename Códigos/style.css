@@ -49,8 +49,6 @@ color:white;
     transform: scale(2.5); 
 }
 
-
-
 .completed{
     text-decoration: line-through;
     opacity: 0.8 ;
@@ -100,7 +98,11 @@ justify-content: center;
 gap:0.5rem;
 }
 
-.the-list2{
-border-radius: 20px;
+li{
+    background-color:steelblue;
+    color:white;
+    display: flex;
+   
 }
+
 

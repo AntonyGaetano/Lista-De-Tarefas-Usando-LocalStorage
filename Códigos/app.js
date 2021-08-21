@@ -1,12 +1,10 @@
-const listElement = document.querySelector('ul')
-const inputElement = document.querySelector('input')
-const buttonElement = document.querySelector('.button')
+const listElement = document.querySelector('ul');
+const inputElement = document.querySelector('input');
+const buttonElement = document.querySelector('.button');
 
-const tarefas = JSON.parse(localStorage.getItem('list_tarefas')) || []
+const tarefas = JSON.parse(localStorage.getItem('list_tarefas')) || [];
 
-document.addEventListener("load",inputElement.focus())
-
-
+document.addEventListener("load",inputElement.focus());
 
 function mostraTarefas(){
 
@@ -15,44 +13,44 @@ function mostraTarefas(){
 
     for (item of tarefas) {
 
-        const itemList = document.createElement('li')
-        const itemText = document.createTextNode(item)
+        const itemList = document.createElement('li');
+        const itemText = document.createTextNode(item);
 
-        itemList.setAttribute('class', 'mdl-list__item')
+        itemList.setAttribute('class', 'mdl-list__item');
 
-        const linkElement = document.createElement('button')
-        linkElement.classList.add("delete-btn");
+        const ApagarTarefa = document.createElement('button');
+        ApagarTarefa.classList.add("delete-btn");
 
-        linkElement.innerHTML='<i class="fas fa-trash"></i>'
+        ApagarTarefa.innerHTML='<i class="fas fa-trash"></i>';
 
         const tarefaCompleta=document.createElement('button');
         tarefaCompleta.classList.add("completed-btn");
         tarefaCompleta.innerHTML='<i class="fas fa-check"></i>'
 
-        const Div = document.createElement('div')
+        const Div = document.createElement('div');
         Div.classList.add("the-div");
 
-        const Div2 = document.createElement('div')
+        const Div2 = document.createElement('div');
         Div2.classList.add("the-div2");
 
-        const pos = tarefas.indexOf(item)
-        linkElement.setAttribute('onclick', `removeTarefa(${pos})`)
+        const pos = tarefas.indexOf(item);
+        ApagarTarefa.setAttribute('onclick', `removeTarefa(${pos})`);
 
-        itemList.appendChild(itemText)
-        Div.appendChild(tarefaCompleta)
-        Div.appendChild(linkElement)
-        itemList.appendChild(Div)
-        Div2.appendChild(itemList)
+        itemList.appendChild(itemText);
+        Div.appendChild(tarefaCompleta);
+        Div.appendChild(ApagarTarefa);
+        itemList.appendChild(Div);
+        Div2.appendChild(itemList);
         
 
-        listElement.appendChild(Div2)
+        listElement.appendChild(Div2);
     }
 }
 
 mostraTarefas()
 
 function addTerefa() {
-    const tarefa = inputElement.value
+    const tarefa = (inputElement.value == "")?"- Digite uma tarefa -" : inputElement.value;
 
     tarefas.push(tarefa)
 
