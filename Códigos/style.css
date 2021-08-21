@@ -14,7 +14,8 @@ body{
     margin: 5rem auto;
     border: 1px solid;
     box-shadow: -4px 4px 2px;
-    padding: 3rem 4rem;
+    padding: 3rem 0rem;
+    background-color:steelblue;
 }
 
 .content>h2{
@@ -24,17 +25,18 @@ body{
 }
 
 .input-button{
+   width: 100%;
    display: flex;
-   gap:2.4rem;
-   padding: 2.2rem;
+   gap:3rem;
+   padding: 2.2rem 3rem;
    margin-bottom: 1rem;
    border-radius: 20px;
    align-items: center;
+   justify-content: space-evenly;
 }
 
-.button:hover{
+.button:hover,.fa-palette:hover{
 color:white;
-
 }
 
 #tarefa{
@@ -45,7 +47,7 @@ color:white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.fa-plus{
+.fa-plus,.fa-palette{
     transform: scale(2.5); 
 }
 
@@ -99,10 +101,15 @@ gap:0.5rem;
 }
 
 li{
-    background-color:steelblue;
-    color:white;
+    background-color:#FCCF3A;
+    color:black;
     display: flex;
-   
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: #ffc400;
+    border: 1px solid white;
 }
 
 
