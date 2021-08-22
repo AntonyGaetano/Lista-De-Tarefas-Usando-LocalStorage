@@ -37,6 +37,7 @@ body{
 
 .button:hover,.fa-palette:hover{
 color:white;
+cursor: pointer;
 }
 
 #tarefa{
@@ -111,16 +112,51 @@ li:hover{
 }
 
 #box-suspenso{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align:center;
+  z-index: 2;
+  position: absolute;
+  top: 20%; /* posiciona na metade da tela */
+  margin-top:-25px;/* e retrocede metade da altura */
+  display: flex;
+}
+
+#box-dentro{
     border: 1px solid;
     width: max-content;
-    background-color: white;
-    padding: 1.4rem 1rem;
-    gap:0.5rem;
-    display: grid;
     margin: auto;
-    position:absolute;
-    justify-content: center;
-    z-index: 2;
+    padding: 3rem 1rem;
+    padding-bottom: 1.5rem;
+    background-color:crimson;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#box-dentro > div > img:hover{
+    cursor: pointer;
+}
+
+#bloco-suspenso-img2{
+    margin: 0 0.6rem;
+}
+
+#bnt-box-suspenso{
+    width: 20%;
+    padding: 0.7rem;
+    margin: 0.4rem auto;
+    border-radius: 5px;
+}
+
+#box-dentro > h4{
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+    margin-top: -30px;
+    color:white;
+    font-family: cursive;
 }
 
 

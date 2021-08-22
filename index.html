@@ -10,11 +10,16 @@
 </head>
 <body>
 
-
   <div id="box-suspenso">
-    <img src="foto1.png" width="200px" height="140px">
-    <img src="foto2.png" width="200px"  height="140px">
-    <img src="foto3.png" width="200px" height="140px">
+   <div id="box-dentro">
+     <h4>TEMAS DE CORES:</h4>
+    <div>
+     <img src="foto1.png" width="200px" height="140px" id="bloco-suspenso-img1">
+     <img src="foto2.png" width="200px"  height="140px" id="bloco-suspenso-img2">
+     <img src="foto3.png" width="200px" height="140px" id="bloco-suspenso-img3">
+    </div>
+    <button id="bnt-box-suspenso">Fechar</button>
+   </div>
   </div>
 
 <div class="content">
@@ -129,6 +134,23 @@ function AndeCheck(e){
     
     }
  }
+
+ var boxSuspenso=document.getElementById("box-suspenso");
+ var Paleta=document.querySelector(".fa-palette");
+var BtnSuspenso=document.getElementById("bnt-box-suspenso");
+ 
+ const AbrirBoxSuspenso = () =>{
+     boxSuspenso.style.display="flex";
+ }
+
+ const FecharBoxSuspenso = () =>{
+    boxSuspenso.style.display="none";
+ }
+
+ BtnSuspenso.addEventListener("click",FecharBoxSuspenso)
+ Paleta.addEventListener("click",AbrirBoxSuspenso)
+
+
 
  </script>
 </body>
