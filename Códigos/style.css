@@ -1,7 +1,7 @@
 *{padding: 0px; margin: 0px; box-sizing: border-box;}
 
 body{
-    background-color: #FCCF3A;
+    background-color: #FCCF3A;/*rgba(76, 0, 130, 0.849); *#fc573a; */
     min-height: 100vh;
 }
 
@@ -15,7 +15,7 @@ body{
     border: 1px solid;
     box-shadow: -4px 4px 2px;
     padding: 3rem 0rem;
-    background-color:steelblue;
+    background-color:cornflowerblue;
 }
 
 .content>h2{
@@ -101,7 +101,7 @@ gap:0.5rem;
 }
 
 li{
-    background-color:#FCCF3A;
+    background-color: #FCCF3A;
     color:black;
     display: flex;
 }
