@@ -141,6 +141,7 @@ var BtnSuspenso=document.getElementById("bnt-box-suspenso");
  
  const AbrirBoxSuspenso = () =>{
      boxSuspenso.style.display="flex";
+
  }
 
  const FecharBoxSuspenso = () =>{
@@ -150,7 +151,40 @@ var BtnSuspenso=document.getElementById("bnt-box-suspenso");
  BtnSuspenso.addEventListener("click",FecharBoxSuspenso)
  Paleta.addEventListener("click",AbrirBoxSuspenso)
 
+ var el = document.getElementById('box-dentro');
+el.addEventListener('click',id);
 
+function id(e) {
+    var imgs = ["bloco-suspenso-img1","bloco-suspenso-img2","bloco-suspenso-img3"]
+
+     for(item of imgs){
+     document.getElementById(item).style.border="none";
+     }
+
+    var tag = document.getElementById(e.target.id);
+    if(e.target.id == imgs[0]){
+       tag.style.border="2px solid white"
+       document.body.style.backgroundColor="rgba(76, 0, 130, 0.849)";
+       document.querySelector(".content").style.backgroundColor="rgb(24, 0, 133)";
+       document.querySelector(".fa-plus").style.color="white";
+       document.querySelector(".fa-palette").style.color="white";
+    }
+    else if(e.target.id == imgs[1]){
+       tag.style.border="2px solid white"
+       document.body.style.backgroundColor="#fc573a"
+       document.querySelector(".content").style.backgroundColor="rgb(238, 238, 238)";
+       document.querySelector(".fa-plus").style.color="#fc573a";
+       document.querySelector(".fa-palette").style.color="#fc573a";
+     
+    } 
+    else if(e.target.id == imgs[2]){
+       tag.style.border="2px solid white";
+       document.body.style.backgroundColor="";
+       document.querySelector(".content").style.backgroundColor="";
+       document.querySelector(".fa-plus").style.color="";
+       document.querySelector(".fa-palette").style.color="";
+    }
+}
 
  </script>
 </body>
