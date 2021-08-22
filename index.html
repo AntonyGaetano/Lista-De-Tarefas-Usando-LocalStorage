@@ -14,16 +14,16 @@
    <div id="box-dentro">
      <h4>TEMAS DE CORES:</h4>
     <div>
-     <img src="foto1.png" width="200px" height="140px" id="bloco-suspenso-img1">
-     <img src="foto2.png" width="200px"  height="140px" id="bloco-suspenso-img2">
-     <img src="foto3.png" width="200px" height="140px" id="bloco-suspenso-img3">
+     <img src="foto1.jpg" width="200px" height="140px" id="bloco-suspenso-img1">
+     <img src="foto2.jpg" width="200px"  height="140px" id="bloco-suspenso-img2">
+     <img src="foto3.jpg" width="200px" height="140px" id="bloco-suspenso-img3">
     </div>
     <button id="bnt-box-suspenso">Fechar</button>
    </div>
   </div>
 
 <div class="content">
-  <h2>Lista De Tarefas </h2>
+  <h2 id="titulo">Lista De Tarefas </h2>
 
    <div class="input-button">
 
@@ -168,6 +168,7 @@ function id(e) {
        document.querySelector(".content").style.backgroundColor="rgb(24, 0, 133)";
        document.querySelector(".fa-plus").style.color="white";
        document.querySelector(".fa-palette").style.color="white";
+       document.getElementById("titulo").style.color="white";
     }
     else if(e.target.id == imgs[1]){
        tag.style.border="2px solid white"
@@ -175,7 +176,7 @@ function id(e) {
        document.querySelector(".content").style.backgroundColor="rgb(238, 238, 238)";
        document.querySelector(".fa-plus").style.color="#fc573a";
        document.querySelector(".fa-palette").style.color="#fc573a";
-     
+       document.getElementById("titulo").style.color="#fc573a";
     } 
     else if(e.target.id == imgs[2]){
        tag.style.border="2px solid white";
@@ -183,6 +184,7 @@ function id(e) {
        document.querySelector(".content").style.backgroundColor="";
        document.querySelector(".fa-plus").style.color="";
        document.querySelector(".fa-palette").style.color="";
+       document.getElementById("titulo").style.color="";
     }
 }
 

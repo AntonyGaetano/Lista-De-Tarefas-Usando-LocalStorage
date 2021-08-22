@@ -14,7 +14,7 @@ body{
     margin: 5rem auto;
     border: 1px solid;
     box-shadow: -4px 4px 2px;
-    padding: 2rem 0rem;
+    padding: 2rem 1rem;
     background-color:cornflowerblue;
 }
 
@@ -120,7 +120,7 @@ li:hover{
   position: absolute;
   top: 20%; /* posiciona na metade da tela */
   margin-top:-25px;/* e retrocede metade da altura */
-  display: flex;
+  display: none;
 }
 
 #box-dentro{
