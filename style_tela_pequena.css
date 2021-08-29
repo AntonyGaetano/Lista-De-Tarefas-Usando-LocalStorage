@@ -49,8 +49,6 @@ body{
     transform: scale(1.6); 
 }
 
-
-
 .completed{
     text-decoration: line-through;
     opacity: 0.8 ;
@@ -61,7 +59,6 @@ body{
 .fa-trash, .fa-check{
     pointer-events: none;
 }
-
 
 .mdl-list__item{
     font-size: 14px;
@@ -74,7 +71,7 @@ body{
     min-width: 30%;
     list-style: none;
     border-radius: 10px;
-    font-family: cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .the-div > button{
