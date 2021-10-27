@@ -4,7 +4,7 @@
 
 - Foi usado o localStorage para armazenar as tarefas informada pelo o usuário, para que mesmo que ele feche a tela e quando voltar ainda esteja lá a determinada tarefa informada por ele!
 
-### Loyout para notebook e desktop
+### Layout para notebook e desktop
 
 <img src="gif/app_lista_telanot.gif">
 
